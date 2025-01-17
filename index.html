@@ -3,11 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./style.css">
+    <title>Favorite Movie Survey</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <header>
+        <h1 id="title">Favorite Movie Survey</h1>
+        <p id="description">Share your preferences for Favorite Movie! Help us understand what you love the most.</p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+            <label id="name-label" for="name">Name:</label>
+            <input 
+                id="name" 
+                type="text" 
+                name="name" 
+                placeholder="Enter your name" 
+                required>
+
+            <label id="email-label" for="email">Email:</label>
+            <input 
+                id="email" 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                required>
+
+            <label id="number-label" for="number">Age:</label>
+            <input 
+                id="number" 
+                type="number" 
+                name="age" 
+                placeholder="Enter your age" 
+                min="18" 
+                max="100" 
+                required
+            >
+
+            <label for="dropdown">What is your favorite Movie?</label>
+            <select id="dropdown" name="fav-movie" placeholder="enter your favorite movie">
+                <option value="marvel">Avanger end-game</option>
+                <option value="interr">Interstelar</option>
+                <option value="unchartd">Uncharted</option>
+                <option value="Mufasa">Mufasa:the lion king</option>
+                <option value="dune">Dune</option>
+            </select>
+
+            <fieldset>
+                <legend>Have you watch your favorite movie?</legend>
+                <label>
+                    <input type="radio" name="favorite-movie" value="yes" required> Yes
+                </label>
+                <label>
+                    <input type="radio" name="favorite-movie" value="no"> No
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>why did you choose that movie as your favorite movie? (Select all that apply)</legend>
+                <label>
+                    <input type="checkbox" name="features" value="actor"> Actor
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="plot wish"> Plot wish
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="easteregg"> Easteregg
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="grapich"> Visual grapich
+                </label>
+            </fieldset>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea 
+                id="comments" 
+                name="comments" 
+                rows="4" 
+                placeholder="Let us know your thoughts about favorite movie..."
+            ></textarea>
+
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
 </body>
 </html>
